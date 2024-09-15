@@ -1,10 +1,10 @@
 <template>
     <div :style="backgroundStyle"
         class="h-screen flex items-center justify-center text-white bg-cover bg-center transition-all duration-500">
-        <div class="flex justify-center flex-col items-center">
+        <div class="flex justify-center flex-col items-center gap-2">
             <h1 class="text-4xl md:text-6xl font-bold">Hope for Humanity</h1>
             <h4 class="md:text-xl ">Give a helping hand to those who need it</h4>
-            <div class="flex gap-2 pt-2">
+            <div class="flex gap-2 ">
                 <UButton to="/About" target="_blank" color="white" class="bg-blue-500">Learn more</UButton>
                 <UButton to="/Contact" target="_blank">Donate Now</UButton>
             </div>
