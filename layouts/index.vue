@@ -4,9 +4,6 @@
         <div class='bg-white pb-[200px]'>
             <slot />
         </div>
-        <div class="">
-            <Myfooter />
-        </div>
-        
+        <Myfooter />
     </div>
 </template>
