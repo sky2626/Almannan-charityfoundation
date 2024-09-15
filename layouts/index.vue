@@ -1,9 +1,9 @@
 <template>
     <div>
         <Myheader />
-        <div class='bg-white pb-[200px]'>
+        <div class='bg-white'>
             <slot />
         </div>
-        <Myfooter />
+        <Mainfooter />
     </div>
 </template>
