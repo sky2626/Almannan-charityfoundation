@@ -7,7 +7,24 @@
         <div class="mt-8">
             <Live />
         </div>
-        
+        <div class="py-[50px] px-[260px] bg-emerald-100">
+            <div class="flex justify-center items-center flex-col mb-16">
+                <h1 class=" text-lg text-blue-300">- Campaingns</h1>
+                <h1 class="font-bold text-2xl text-blue-300">Featured Campaign</h1>
+                <p class="text-gray-600">we have be changing people in so many ways</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
+                <Card imageUrl="https://cdn.pixabay.com/photo/2016/01/14/02/48/girl-1139277_1280.jpg"
+                    title="Card Title 1" description="Card Description 1" />
+                <Card imageUrl="https://cdn.pixabay.com/photo/2016/01/14/02/48/girl-1139277_1280.jpg"
+                    title="Card Title 2" description="Card Description 2" />
+                <Card imageUrl="https://cdn.pixabay.com/photo/2016/01/14/02/48/girl-1139277_1280.jpg"
+                    title="Card Title 3" description="Card Description 3" />
+            </div>
+        </div>
+        <div>
+            <Mainfooter />
+        </div>
     </div>
-    
+
 </template>
