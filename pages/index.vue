@@ -1,10 +1,14 @@
+<script setup lang="ts">
+import Newsletter from '~/components/newsletter.vue';
+</script>
+
 <template>
     <div class="relative bg-emerald-50">
         <Hero />
         <div class="relative top-[-60px]">
             <Help />
         </div>
-        <div class="mt-8">
+        <div class="mx-2 my-24">
             <Live />
         </div>
         <div class="py-[50px] px-[260px] bg-emerald-100">
@@ -21,6 +25,9 @@
                 <Card imageUrl="https://cdn.pixabay.com/photo/2016/01/14/02/48/girl-1139277_1280.jpg"
                     title="Card Title 3" description="Card Description 3" />
             </div>
+        </div>
+        <div class="my-[80px] mx-[8px] flex justify-center">
+            <Newsletter />
         </div>
         <div>
             <Mainfooter />
