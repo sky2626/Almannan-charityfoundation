@@ -20,20 +20,10 @@
                     title="Card Title 3" description="Card Description 3" />
             </div>
         </div>
-        <div class="bg-image py-[80px] px-2 mx-[8px] flex justify-center rounded-2xl">
+        <div class="py-[80px] px-2 mx-[8px] flex justify-center ">
             <Newsletter />
         </div>
-        <div>
-            <Mainfooter />
-        </div>
+        
     </div>
 
 </template>
-
-<style scoped>
-.bg-image {
-    background-image: url(https://cdn.pixabay.com/photo/2017/12/22/07/54/portrait-3033181_1280.jpg); 
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-</style>
