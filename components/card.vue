@@ -1,5 +1,5 @@
 <template> 
-    <div class="card bg-emerald-50 overflow-hidden rounded-tr-[50px]  rounded-b-sm rounded-tl-sm">
+    <div class="card bg-emerald-50 overflow-hidden rounded-tr-[50px]  rounded-b-md rounded-tl-sm">
         <img :src="imageUrl" alt="Card Image" class="w-full h-56 object-cover rounded-tr-[50px] rounded-bl-[50px]">
         <div class="p-6">
             <h2 class="text-lg font-bold mb-2 text-gray-700">{{ title }}</h2>
