@@ -6,16 +6,15 @@
             </div>
             <div class="navbar-menu md:hidden">
                 <button @click="toggleMenu" class="navbar-burger flex items-center">
-                    <span class="navbar-burger-bar text-blue-500"></span>
+                    <span class="navbar-burger-bar"></span>
                     <span class="navbar-burger-bar"></span>
                     <span class="navbar-burger-bar"></span>
                 </button>
             </div>
             <div class="navbar-menu md:flex md:items-center md:justify-center">
-                <NuxtLink to="/" class="navbar-item mx-2 text-blue-500 hover:text-blue-300" >Home</NuxtLink>
-                <NuxtLink to="/About" class="navbar-item mx-2 text-blue-500 hover:text-blue-300" >About</NuxtLink>
-                <NuxtLink to="/Contact" class="navbar-item mx-2 text-blue-500 hover:text-blue-300" >Contact</NuxtLink>
-                <NuxtLink to="/Gallary" class="navbar-item mx-2 text-blue-500 hover:text-blue-300" >Gallary</NuxtLink>
+                <a href="#" class="navbar-item mx-2">Home</a>
+                <a href="#" class="navbar-item mx-2">About</a>
+                <a href="#" class="navbar-item mx-2">Contact</a>
             </div>
         </div>
     </nav>
