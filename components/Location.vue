@@ -6,7 +6,7 @@ import Locationtext from './Locationtext.vue';
 </script>
 
 <template>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 shadow-md shadow-blue-50 max-w-4xl p-8 mb-10 rounded-xl mx-auto ">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 shadow-xl shadow-blue-50 max-w-4xl p-8 mb-10 rounded-xl mx-auto ">
         <div class="flex flex-col justify-center items-center">
             <MyLoc class="text-4xl text-green-500" />
             <Locationtext title="Headquarters" description="Kumasi" />
