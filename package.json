@@ -12,8 +12,13 @@
   "dependencies": {
     "@nuxt/image": "^1.8.0",
     "@nuxt/ui": "^2.18.4",
+    "axios": "^1.7.7",
+    "firebase-admin": "^12.6.0",
     "nuxt": "^3.12.4",
     "vue": "latest",
     "vue-plyr": "^7.0.0"
+  },
+  "devDependencies": {
+    "wrangler": "^3.79.0"
   }
 }

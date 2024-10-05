@@ -1,9 +1,12 @@
+<script setup lang="ts">
+import Mission from '~/components/Mission.vue';
+</script>
+
 <template>
     <div class="about-page">
         <AboutHero />
         <section class="history-section bg-gray-100 p-8">
-            <h2 class="text-3xl font-bold text-center mb-4">Our History</h2>
-            <p class="text-center text-gray-600">Discover our journey and milestones.</p>
+            <Mission />
         </section>
 
         <section class="team-section bg-white px-8 pt-8 pb-28">
