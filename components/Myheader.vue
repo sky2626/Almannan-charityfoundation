@@ -15,7 +15,7 @@
                 <NuxtLink to="/" class="navbar-item mx-2 text-blue-500 hover:text-blue-300" >Home</NuxtLink>
                 <NuxtLink to="/About" class="navbar-item mx-2 text-blue-500 hover:text-blue-300" >About</NuxtLink>
                 <NuxtLink to="/Contact" class="navbar-item mx-2 text-blue-500 hover:text-blue-300" >Contact</NuxtLink>
-                <NuxtLink to="/Gallary" class="navbar-item mx-2 text-blue-500 hover:text-blue-300" >Gallary</NuxtLink>
+                <NuxtLink to="/Gallary" class="navbar-item mx-2 text-blue-500 hover:text-blue-300" >Gallery</NuxtLink>
             </div>
         </div>
     </nav>
