@@ -1,5 +1,5 @@
 <template>
-    <div class="flex p-1 flex-col md:flex-row justify-center gap-4 md:gap-0">
+    <div class="flex p-1 flex-col  md:flex-row justify-center gap-4 md:gap-0">
         <div class="flex justify-center items-center min-width: content-fit">
             <div class="flex flex-grow: 0">
                 <div
@@ -18,7 +18,7 @@
                 </div>
             </div>
         </div>
-        <div class="flex flex-col p-[16px] md:w-[550px]">
+        <div class="flex flex-col p-[16px] md:w-[550px] bg-white rounded-2xl">
             <h1 class="font-bold text-2xl text-blue-300">Changing lives of the less privillage</h1>
             <h3 class="text-xl font-semi-bold text-gray-600">More than two thousand children in Africa are living in
                 poorvaty</h3>
