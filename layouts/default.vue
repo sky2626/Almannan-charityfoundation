@@ -1,7 +1,8 @@
 <template>
     <div class="bg-white">
         <header>
-            <Myheader />
+            
+            <NavigationBar />
         </header>
         <main>
             <slot />
