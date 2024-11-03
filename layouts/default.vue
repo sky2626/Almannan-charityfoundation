@@ -2,7 +2,7 @@
     <div class="bg-white">
         <header>
             
-            <NavigationBar />
+            
         </header>
         <main>
             <slot />

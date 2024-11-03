@@ -12,7 +12,7 @@ export default defineNuxtConfig({
         { hid: 'description', name: 'description', content: 'Your website description' }
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/logo.svg' },
+        { rel: 'icon', type: 'image/x-icon', href: '/pat.png' },
       ],
     },
   },
