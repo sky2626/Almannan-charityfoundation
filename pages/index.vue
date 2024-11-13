@@ -12,11 +12,11 @@
             <h1 class="font-bold text-2xl text-blue-300 text-center">Featured Campaign</h1>
             <p class="text-gray-600 text-center mb-6">we have be changing people in so many ways</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
-                <Card imageUrl="https://cdn.pixabay.com/photo/2016/01/14/02/48/girl-1139277_1280.jpg"
+                <Card imageUrl="/17.jpeg"
                     title="Card Title 1" description="Card Description 1" />
-                <Card imageUrl="https://cdn.pixabay.com/photo/2016/01/14/02/48/girl-1139277_1280.jpg"
+                <Card imageUrl="/19.jpeg"
                     title="Card Title 2" description="Card Description 2" />
-                <Card imageUrl="https://cdn.pixabay.com/photo/2016/01/14/02/48/girl-1139277_1280.jpg"
+                <Card imageUrl="/12.jpeg"
                     title="Card Title 3" description="Card Description 3" />
             </div>
         </div>

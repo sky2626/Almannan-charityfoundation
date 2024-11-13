@@ -34,7 +34,7 @@ export default {
 <style scoped>
 .bg {
     background-color: rgba(0, 255, 157, 0.5);  
-    background-image: url(https://cdn.pixabay.com/photo/2017/12/22/07/54/portrait-3033181_1280.jpg); 
+    background-image: url(/8.jpeg); 
     background-size: cover;
     background-repeat: no-repeat;
 }

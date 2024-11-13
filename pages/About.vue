@@ -15,9 +15,9 @@ import History from '~/components/History.vue';
         <section class="team-section bg-white px-8 pt-8 pb-28">
             <h2 class="text-3xl font-bold text-blue-300 text-center mb-16">Our Team</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-2xl mx-auto">
-                <TeamMember name="John Doe" title="CEO" image="https://cdn.pixabay.com/photo/2016/03/27/19/20/indian-1283789_1280.jpg" />
-                <TeamMember name="John Doe" title="CEO" image="https://cdn.pixabay.com/photo/2016/03/27/19/20/indian-1283789_1280.jpg" />
-                <TeamMember name="John Doe" title="CEO" image="https://cdn.pixabay.com/photo/2016/03/27/19/20/indian-1283789_1280.jpg" />
+                <TeamMember name="John Doe" title="CEO" image="/13.jpeg" />
+                <TeamMember name="John Doe" title="CEO" image="/21.jpeg" />
+                <TeamMember name="John Doe" title="CEO" image="/22.jpeg" />
             </div>
         </section>
         

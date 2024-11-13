@@ -10,7 +10,7 @@
 
         <!-- Desktop navigation -->
         <ul :class="{ 'hidden': mobile }"
-            class="md:flex md:items-center md:w-auto w-full md:py-0 py-4 md:pl-0 pl-4 md:pr-0 pr-4 md:text-lg text-sm  bg-gray-200 md:shadow-none shadow-md">
+            class="md:flex md:items-center md:w-auto w-full md:py-0 py-4 md:pl-0 pl-4 md:pr-0 pr-4 md:text-lg text-sm bg-gray-200 md:shadow-none shadow-md">
             <li v-for="item in navigationItems" :key="item.id" class="md:mr-4">
                 <router-link :to="item.link"
                     class="block text-gray-600 hover:text-gray-900 transition duration-300 ease-in-out">

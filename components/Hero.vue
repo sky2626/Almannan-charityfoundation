@@ -25,9 +25,11 @@ export default {
     data() {
         return {
             images: [
-                'url(https://cdn.pixabay.com/photo/2017/01/20/13/01/africa-1994846_1280.jpg)',
-                'url(https://cdn.pixabay.com/photo/2015/11/21/13/04/children-1054858_1280.jpg)',
-                'url(https://cdn.pixabay.com/photo/2019/11/11/04/33/child-4617142_1280.jpg)'
+                'url(/1.jpeg)',
+                'url(/2.jpeg)',
+                'url(/3.jpeg)',
+                'url(/4.jpeg)',
+                'url(/5.jpeg)',
 
             ],
             currentImageIndex: 0

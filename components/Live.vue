@@ -4,16 +4,16 @@
             <div class="flex flex-grow: 0">
                 <div
                     class="image-container-top rounded-full relative right-[-80px] top-[90px] border-4 border-green-500">
-                    <NuxtImg src="https://cdn.pixabay.com/photo/2016/10/15/13/45/heart-1742490_960_720.jpg"
+                    <NuxtImg src="/10.jpeg"
                         class="image" />
                 </div>
                 <div class="image-container rounded-full border-4 border-blue-300">
-                    <NuxtImg src="https://cdn.pixabay.com/photo/2017/03/14/17/25/street-2143805_960_720.jpg"
+                    <NuxtImg src="/16.jpeg"
                         class="image" />
                 </div>
                 <div
                     class="image-container-down rounded-full relative right-[80px] top-[0px] border-4 border-yellow-300">
-                    <NuxtImg src="https://cdn.pixabay.com/photo/2013/04/10/18/07/child-102577_1280.jpg"
+                    <NuxtImg src="/17.jpeg"
                         class="image" />
                 </div>
             </div>

@@ -7,7 +7,7 @@
 </template>
 <style>
     .bg-img {
-        background-image: url(https://cdn.pixabay.com/photo/2016/03/27/19/20/indian-1283789_1280.jpg);
+        background-image: url(/12.jpeg);
         background-size: cover;
         background-repeat: no-repeat;
     }

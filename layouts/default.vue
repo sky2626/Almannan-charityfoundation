@@ -1,8 +1,7 @@
 <template>
     <div class="bg-white">
         <header>
-            
-            
+          
         </header>
         <main>
             <slot />

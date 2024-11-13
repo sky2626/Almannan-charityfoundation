@@ -4,7 +4,7 @@
             <p class="text-center text-gray-600">Discover our journey and milestones. </p>
         </div>
         <aside class="max-w-md ">
-            <NuxtImg src="https://cdn.pixabay.com/photo/2024/02/17/09/39/cat-8579018_640.jpg" />
+            <NuxtImg src="/16.jpeg" />
         </aside>
     </section>
 </template>
