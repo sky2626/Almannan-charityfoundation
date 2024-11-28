@@ -19,9 +19,9 @@
             </div>
         </div>
         <div class="flex flex-col p-[16px] md:w-[550px] bg-white rounded-2xl">
-            <h1 class="font-bold text-2xl text-blue-300">Changing lives of the less privillage</h1>
+            <h1 class="font-bold text-2xl text-blue-300">Changing lives of the less privileged</h1>
             <h3 class="text-xl font-semi-bold text-gray-600">More than two thousand children in Africa are living in
-                poorvaty</h3>
+                poverty</h3>
             <p class=" text-gray-600">Every individual deserves the opportunity to live a fulfilling life, regardless of
                 their circumstances. By
                 working together to address the challenges faced by the less privileged, we can create a more equitable

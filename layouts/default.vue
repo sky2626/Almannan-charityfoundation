@@ -1,9 +1,8 @@
 <template>
     <div class="bg-white">
-        <header>
-          
-        </header>
+        <nav />
         <main>
+            <Nav />
             <slot />
         </main>
         <footer>

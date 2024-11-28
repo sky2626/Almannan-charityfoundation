@@ -1,12 +1,16 @@
 <template>
     <div class="relative bg-emerald-50">
         <Hero />
+        
         <div class="relative top-[-60px]">
             <Help />
         </div>
+        
+        <!--
         <div class="magicpattern mx-2 py-24">
             <Live />
         </div>
+        -->
         <div class="py-[100px] px-2 md:px-[260px] bg-emerald-100 ">
             <h1 class=" text-lg text-blue-300 text-center">- Campaingns</h1>
             <h1 class="font-bold text-2xl text-blue-300 text-center">Featured Campaign</h1>

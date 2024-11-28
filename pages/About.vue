@@ -19,6 +19,5 @@ import History from '~/components/History.vue';
                 <TeamMember name="John Doe" title="CEO" image="/22.jpeg" />
             </div>
         </section>
-        
     </div>
 </template>
