@@ -33,6 +33,10 @@
                     class="mb-4 p-3 text-red-600 text-center border border-red-600 bg-red-100 font-medium rounded-xl">
                     {{ warningMessage }}
                 </p>
+                <p v-if="successMessage"
+                    class="mb-4 p-3 text-green-600 text-center border border-green-600 bg-green-100 font-medium rounded-xl">
+                    {{ successMessage }}
+                </p>
 
                 <!-- Amount input -->
                 <input v-model="amount" type="number" placeholder="Enter amount (GHS)"
@@ -61,6 +65,7 @@ const config = useRuntimeConfig()
 const amount = ref("")
 const email = ref("")
 const warningMessage = ref("")
+const successMessage = ref("")
 
 function payWithPaystack() {
     warningMessage.value = ""
@@ -76,7 +81,9 @@ function payWithPaystack() {
         amount: parseInt(amount.value) * 100,
         currency: "GHS",
         callback: function (response) {
-            warningMessage.value = ` Payment successful. Reference: ${response.reference}`
+            successMessage.value = ` Payment successful. Reference: ${response.reference}`
+            amount.value = ""
+            email.value = ""
         },
         onClose: function () {
             warningMessage.value = "⚠️  Payment window closed."

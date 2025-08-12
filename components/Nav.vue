@@ -4,7 +4,7 @@
             <!-- Logo and Name -->
             <NuxtLink to="/" class="flex items-center gap-2">
                 <img src="/pat.svg" alt="NGO Logo" class="h-8 w-8 rounded-full" />
-                <span class="font-bold text-xl text-green-800">Hope for All</span>
+                <span class="font-bold text-xl text-green-800">Almannan Charity Foundation</span>
             </NuxtLink>
 
             <!-- Desktop Menu -->

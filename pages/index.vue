@@ -3,6 +3,7 @@
         <Hero />
         <Programs />
         <Gallery />
+        <Videos />
         <Donation />
     </div>
 
