@@ -1,92 +1,75 @@
 <template>
-    <nav class="">
-        <!-- Desktop navigation -->
-        <div class="md:flex md:justify-center md:items-center pacifico-font hidden">
-            <div class=" flex items-center justify-between w-full bg-white py-4 px-8 shadow-lg shadow-[#471D79]/25">
-                <ul class="flex gap-4">
-                    <li>
-                        <NuxtLink to="/"
-                            class="block text-lg  text-blue-600 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">
-                            Home
-                        </NuxtLink>
-                    </li>
-                    <li>
-                        <NuxtLink to="/about"
-                            class="block text-lg text-blue-600 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">
-                            About
-                        </NuxtLink>
-                    </li>
-                    <li>
-                        <NuxtLink to="/contact"
-                            class="block text-lg text-blue-600 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">
-                            Contact us
-                        </NuxtLink>
-                    </li>
-                    <li>
-                        <NuxtLink to="/learn"
-                            class="block text-lg text-blue-600 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">
-                            Learn
-                        </NuxtLink>
-                    </li>
-                </ul>
-                <img src="/pat.svg" width="40" height="40" alt="logo" class="">
-                <NuxtLink to="/Learn"
-                    class="flex gap-4 items-center font-semibold justify-center hover:gap-6 text-blue-600 border-blue-600">
-                    Start learning
+    <header class="w-full border-b bg-white shadow-sm">
+        <div class="container mx-auto flex items-center justify-between p-4">
+            <!-- Logo and Name -->
+            <NuxtLink to="/" class="flex items-center gap-2">
+                <img src="/pat.svg" alt="NGO Logo" class="h-8 w-8 rounded-full" />
+                <span class="font-bold text-xl text-green-800">Hope for All</span>
+            </NuxtLink>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center gap-6">
+                <NuxtLink v-for="link in links" :key="link.name" :to="link.to"
+                    class="text-foreground hover:text-green-600 font-medium">
+                    {{ link.name }}
                 </NuxtLink>
-            </div>
+                <Button class="bg-green-600 text-white hover:bg-green-700 px-4 py-2 rounded-lg">
+                    Donate
+                </Button>
+            </nav>
 
-        </div>
-
-        <!-- Mobile menu navigation -->
-        <div
-            class="bg-white text-blue-600 p-4 flex items-center justify-between md:hidden  shadow-lg shadow-[#471D79]/25">
-            <img src="/pat.svg" width="50" height="40" alt="logo" class="">
-            <button @click="toggleMenu" class="block md:hidden text-white focus:outline-none">
-                <IconsMenu v-if="!menuOpen" class="text-blue-600 font-bold text-2xl" />
-                <IconsClose v-else class="text-blue-600 font-bold text-xl" />
+            <!-- Mobile Menu Button -->
+            <button @click="isOpen = !isOpen" class="md:hidden p-2 rounded-lg hover:bg-green-100 text-foreground">
+                <svg v-if="!isOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
             </button>
         </div>
-        <div :class="menuOpen ? 'max-h-60' : 'max-h-0'"
-            class="w-full md:flex md:items-center md:w-auto overflow-hidden transition-max-height duration-300 ease-in-out">
-            <ul class="flex md:hidden flex-col ml-8 mt-4 space-y-4 pacifico-font">
-                <li>
-                    <NuxtLink to="/"
-                        class="block text-lg text-blue-600 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">
-                        Home
+
+        <!-- Mobile Menu -->
+        <transition name="fade">
+            <div v-if="isOpen" class="md:hidden bg-white shadow-lg border-t">
+                <div class="flex flex-col p-4 gap-4">
+                    <NuxtLink v-for="link in links" :key="link.name" :to="link.to"
+                        class="hover:text-green-600 font-medium text-foreground" @click="isOpen = false">
+                        {{ link.name }}
                     </NuxtLink>
-                </li>
-                <li>
-                    <NuxtLink to="/about"
-                        class="block text-lg text-blue-600 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">
-                        About
-                    </NuxtLink>
-                </li>
-                <li>
-                    <NuxtLink to="/contact"
-                        class="block text-lg text-blue-600 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">
-                        contact us
-                    </NuxtLink>
-                </li>
-                <li>
-                    <NuxtLink to="/learn"
-                        class="block text-lg text-blue-600 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">
-                        Learn
-                    </NuxtLink>
-                </li>
-            </ul>
-        </div>
-    </nav>
+                    <Button class="bg-green-600 text-white hover:bg-green-700 px-4 py-2 rounded-lg w-full">
+                        Donate
+                    </Button>
+                </div>
+            </div>
+        </transition>
+    </header>
 </template>
 
 <script setup>
+import { ref } from "vue";
+import { Button } from "@/components/ui/button"; // shadcn UI button
 
-
-import { ref } from 'vue';
-
-// State for menu toggle
-const menuOpen = ref(false);
-const toggleMenu = () => {
-    menuOpen.value = !menuOpen.value;
-};
+const isOpen = ref(false);
+const links = [
+    { name: "Home", to: "/" },
+    { name: "About", to: "/about" },
+    { name: "Projects", to: "/projects" },
+    { name: "Volunteer", to: "/volunteer" },
+    { name: "Contact", to: "/contact" },
+];
 </script>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+</style>
