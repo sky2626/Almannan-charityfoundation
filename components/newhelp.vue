@@ -10,7 +10,7 @@
                 Every small act of kindness can change a life.
             </p>
             <div class="mt-8 flex justify-center gap-4">
-                <Button class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 text-lg rounded-lg shadow-lg">
+                <Button class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 text-lg rounded-lg shadow-lg" onclick="document.getElementById('target-section').scrollIntoView({ behavior: 'smooth' });">
                     Donate Now
                 </Button>
                 <Button variant="outline"
@@ -46,7 +46,7 @@
                     <p class="text-gray-600 mb-4">
                         Every contribution helps us provide food, shelter, and education to those in need.
                     </p>
-                    <Button class="bg-green-600 hover:bg-green-700 text-white rounded-lg">
+                    <Button class="bg-green-600 hover:bg-green-700 text-white rounded-lg" onclick="document.getElementById('target-section').scrollIntoView({ behavior: 'smooth' });">
                         Give Today
                     </Button>
                 </CardContent>

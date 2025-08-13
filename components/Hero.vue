@@ -14,7 +14,7 @@
                     in crisis.
                 </p>
                 <div class="flex flex-wrap justify-center lg:justify-start gap-4">
-                    <Button class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl shadow-lg">
+                    <Button class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl shadow-lg" onclick="document.getElementById('target-section').scrollIntoView({ behavior: 'smooth' });">
                         Donate Now
                     </Button>
                     <Button variant="outline"

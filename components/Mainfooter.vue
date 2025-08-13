@@ -20,7 +20,7 @@
 
                 <div class="flex flex-col md:flex-row gap-4">
                     <Input v-model="email" type="email" placeholder="Enter your email"
-                        class="flex-1 px-4 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500" />
+                        class="w-full px-4 py-2 mb-4 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 text-gray-500" />
                     <Button @click="subscribe" class="bg-green-600 text-white px-6 py-3 rounded-xl hover:bg-green-700">
                         Subscribe
                     </Button>
@@ -54,7 +54,7 @@
                 <!-- Column 3 -->
                 <div>
                     <h3 class="text-lg font-semibold text-white mb-4">Contact</h3>
-                    <p>Email: support@almannancharityfoundation.org/</p>
+                    <p>Email: support@almannancharityfoundation.org</p>
                     <p>Phone: +233 530 492 371</p>
                     <div>
                         <p class="mt-4">Follow us on:</p>
