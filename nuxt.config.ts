@@ -19,6 +19,8 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/pat.svg' },
       ],
     },
+          pageTransition: { name: 'page', mode: 'out-in' },
+
   },
   postcss: {
     plugins: {
