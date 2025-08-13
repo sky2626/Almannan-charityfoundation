@@ -26,7 +26,7 @@
         <textarea v-model="form.reason" rows="4" class="border rounded-lg px-4 py-2 w-full"></textarea>
       </div>
 
-      <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+      <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700">
         Submit Application
       </button>
     </form>

@@ -13,7 +13,8 @@
                 <Button class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 text-lg rounded-lg shadow-lg" onclick="document.getElementById('target-section').scrollIntoView({ behavior: 'smooth' });">
                     Donate Now
                 </Button>
-                <Button variant="outline"
+                <Button variant="outline" 
+                        @click="goToVolunteer"
                     class="border-green-600 text-green-600 hover:bg-green-50 px-6 py-3 text-lg rounded-lg">
                     Become a Volunteer
                 </Button>
@@ -31,7 +32,7 @@
                     <p class="text-gray-600 mb-4">
                         Join our mission to bring hope to the needy. Your time and skills can change lives.
                     </p>
-                    <Button class="bg-green-600 hover:bg-green-700 text-white rounded-lg">
+                    <Button @click="goToVolunteer" class="bg-green-600 hover:bg-green-700 text-white rounded-lg">
                         Join Us
                     </Button>
                 </CardContent>
@@ -61,7 +62,7 @@
                     <p class="text-gray-600 mb-4">
                         Help us run sustainable programs that provide basic life needs and education.
                     </p>
-                    <Button class="bg-green-600 hover:bg-green-700 text-white rounded-lg">
+                    <Button class="bg-green-600 hover:bg-green-700 text-white rounded-lg" onclick="document.getElementById('target-section').scrollIntoView({ behavior: 'smooth' });">
                         Support Now
                     </Button>
                 </CardContent>
@@ -73,4 +74,13 @@
 <script setup>
 import { Button } from '@/components/ui/button'
 import { Card, CardHeader, CardContent } from '@/components/ui/card'
+import { useRouter } from 'vue-router'
+const router = useRouter()
+
+function goToVolunteer() {
+  router.push('/volunteer')
+}
+
+
+
 </script>

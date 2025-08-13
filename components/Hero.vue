@@ -17,7 +17,7 @@
                     <Button class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl shadow-lg" onclick="document.getElementById('target-section').scrollIntoView({ behavior: 'smooth' });">
                         Donate Now
                     </Button>
-                    <Button variant="outline"
+                    <Button variant="outline" @click="goToAbout"
                         class="px-6 py-3 rounded-xl border-green-600 text-green-600 hover:bg-green-50">
                         Learn More
                     </Button>
@@ -41,4 +41,9 @@
 
 <script setup>
 import { Button } from '@/components/ui/button'
+import { useRouter } from 'vue-router'
+const router = useRouter();
+function goToAbout() {
+    router.push('/about');
+}
 </script>

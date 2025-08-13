@@ -13,7 +13,9 @@
                     class="text-foreground hover:text-green-600 font-medium">
                     {{ link.name }}
                 </NuxtLink>
-                <Button class="bg-green-600 text-white hover:bg-green-700 px-4 py-2 rounded-lg">
+
+                <Button @click="goToHomeSection('target-section')"
+                    class="bg-green-600 text-white hover:bg-green-700 px-4 py-2 rounded-lg">
                     Donate
                 </Button>
             </nav>
@@ -50,16 +52,40 @@
 
 <script setup>
 import { ref } from "vue";
-import { Button } from "@/components/ui/button"; // shadcn UI button
+import { Button } from "@/components/ui/button"; 
+import { useRouter, useRoute } from 'vue-router'
 
+const router = useRouter();
+const route = useRoute();
 const isOpen = ref(false);
+
 const links = [
     { name: "Home", to: "/" },
     { name: "About", to: "/about" },
     { name: "Projects", to: "/projects" },
     { name: "Volunteer", to: "/volunteer" },
     { name: "Contact", to: "/contact" },
-];
+]; 
+
+function goToHomeSection(sectionId) {
+    if (route.path === '/') {
+        // Already on home page → just scroll
+        const el = document.getElementById(sectionId)
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth' })
+        }
+    } else {
+        // Navigate home, then scroll after DOM loads
+        router.push(`/#${sectionId}`).then(() => {
+            setTimeout(() => {
+                const el = document.getElementById(sectionId)
+                if (el) {
+                    el.scrollIntoView({ behavior: 'smooth' })
+                }
+            }, 300) // wait for page render
+        })
+    }
+}
 </script>
 
 <style scoped>
