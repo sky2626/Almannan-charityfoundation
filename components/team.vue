@@ -62,4 +62,3 @@ const team = [
   }
 ]
 </script>
-

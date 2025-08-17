@@ -19,7 +19,7 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/pat.svg' },
       ],
     },
-          pageTransition: { name: 'page', mode: 'out-in' },
+    pageTransition: { name: 'page', mode: 'out-in' },
 
   },
   postcss: {
@@ -30,7 +30,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      paystackKey: process.env.PAYSTACK_PUBLIC_KEY || "pk_test_eb3bc9ba87ba3fe7f19a2fe09d4a7132ea9d37b2" // Your key here
+      paystackKey: process.env.PAYSTACK_PUBLIC_KEY || "sk_test_a8492bf88093e91a900931f56e02acb8a9eeb1df" // Your key here
     }
   },
   modules: [ "@nuxt/image", 'shadcn-nuxt'],

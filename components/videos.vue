@@ -14,10 +14,10 @@
 <script setup>
 const videos = [
     // Paste your Facebook video URLs here
-    'https://www.facebook.com/reel/1412013890104577/',
+    //'https://www.facebook.com/reel/1412013890104577/',
     "https://www.facebook.com/reel/3763754627193050/",
     "https://www.facebook.com/100009851740932/videos/758804940180296/",
-    "https://www.facebook.com/reel/1101767921758189/",
+    //"https://www.facebook.com/reel/1101767921758189/",
     "https://www.facebook.com/watch/?ref=search&v=865012962504761&external_log_id=ab18d9e8-67ce-497c-b24b-e8b95e28646d&q=almannan%20charity%20foundation",
     "https://www.facebook.com/watch/?ref=search&v=607933570234071&external_log_id=ab18d9e8-67ce-497c-b24b-e8b95e28646d&q=almannan%20charity%20foundation",
 ]
