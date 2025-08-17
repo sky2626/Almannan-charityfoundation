@@ -30,7 +30,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      paystackKey: process.env.PAYSTACK_PUBLIC_KEY || "sk_test_a8492bf88093e91a900931f56e02acb8a9eeb1df" // Your key here
+      paystackKey: process.env.PAYSTACK_PUBLIC_KEY || "pk_test_7a0202a10e7cf616de8ebfa775251be01369dcf0" // Your key here
     }
   },
   modules: [ "@nuxt/image", 'shadcn-nuxt'],
