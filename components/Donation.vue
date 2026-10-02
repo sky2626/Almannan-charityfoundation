@@ -1,15 +1,15 @@
 <template>
     <section class="py-12 mx-auto pb-24">
         <div class="text-center mb-8">
-            <h1 class="text-3xl font-bold text-gray-800 mb-4">Support Our Cause</h1>
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Support Our Cause</h2>
             <p class="text-gray-600">Your contributions help us make a difference in the community.</p>
         </div>
         <!-- Text and form -->
         <div class="grid grid-cols-1 items-center md:grid-cols-[1fr_auto_1fr] gap-8 max-w-6xl mx-auto px-4">
             <!-- MoMo Details -->
             <div
-                class="grid grid-cols-[144px_1fr] items-center mb-6 p-4 bg-yellow-100 text-yellow-900 rounded-xl border border-yellow-400">
-                <div class="flex flex-col items-center w-36">
+                class="grid grid-cols-1 sm:grid-cols-[110px_1fr] items-center mb-6 p-4 bg-yellow-100 text-yellow-900 rounded-xl border border-yellow-400">
+                <div class="flex flex-col items-center w-24">
                     <img src="/momo.png" alt="MTN MoMo" class="w-full h-16 mx-auto mb-4" />
                 </div>
                 <div class="text-left">
@@ -39,11 +39,11 @@
                 </p>
 
                 <!-- Amount input -->
-                <input v-model="amount" type="number" placeholder="Enter amount (GHS)"
+                <input v-model="amount" aria-label="Donation amount in Ghana cedis" type="number" placeholder="Enter amount (GHS)"
                     class="w-full px-4 py-2 mb-4 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500" />
 
                 <!-- Email input -->
-                <input v-model="email" type="email" placeholder="Enter your email (optional)"
+                <input v-model="email" aria-label="Your email (optional)" type="email" placeholder="Enter your email (optional)"
                     class="w-full px-4 py-2 mb-6 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500" />
 
                 <!-- Paystack button -->

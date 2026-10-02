@@ -1,13 +1,1 @@
-<template>
-    <div class="relative bg-emerald-50">
-        <Hero />
-        <Newhelp />
-        <Programs />
-        <Gallery />
-        <Videos />
-        <section id="target-section">
-            <Donation />
-        </section>
-    </div>
-
-</template>
+<template><div class="home-page"><Hero /><Newhelp /><Programs /><Gallery /><Videos /><section class="volunteer-band"><div class="site-container"><div><p class="eyebrow">There is a place for you here</p><h2>Your time. Your heart.<br />Someone else's brighter day.</h2></div><NuxtLink to="/volunteer" class="action-button">Become a volunteer <span aria-hidden="true">↗</span></NuxtLink></div></section><section id="target-section" class="donation-section"><Donation /></section></div></template>

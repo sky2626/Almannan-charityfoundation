@@ -1,79 +1,23 @@
-<template>
-    <section class="py-12 ">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8 text-green-600">Our Programs in Action</h2>
-            <Carousel :items-to-show="itemsToShow" :wrap-around="true" :autoplay="3000" :pause-autoplay-on-hover="true"
-                :transition="500">
-                <Slide v-for="(item, index) in gallery" :key="index">
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition mb-16">
-                        <img :src="item.image" alt="" class="w-full h-64 object-cover" />
-                        <div class="p-4">
-                            <h3 class="text-lg font-semibold">{{ item.title }}</h3>
-                            <p class="text-gray-600 text-sm">{{ item.description }}</p>
-                        </div>
-                    </div>
-                </Slide>
-
-                <template #addons>
-                    <Navigation />
-                    <Pagination />
-                </template>
-            </Carousel>
-        </div>
-    </section>
-</template>
-
 <script setup>
-import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
-
-const itemsToShow = ref(3);
-
-const updateItemsToShow = () => {
-    if (window.innerWidth < 768) {
-        itemsToShow.value = 1; // Mobile
-    } else {
-        itemsToShow.value = 3; // Tablet & Desktop
-    }
-};
-
-onMounted(() => {
-    updateItemsToShow();
-    window.addEventListener("resize", updateItemsToShow);
-});
-
-onBeforeUnmount(() => {
-    window.removeEventListener("resize", updateItemsToShow);
-});
-const gallery = [
-    {
-        image: '/2.jpeg',
-        title: 'Food Donation Drive',
-        description: 'Providing nutritious meals to underprivileged families.'
-    },
-    {
-        image: '/3.jpeg',
-        title: 'Clean Water Access',
-        description: 'Building wells and providing safe drinking water.'
-    },
-    {
-        image: '/4.jpeg',
-        title: 'Medical Outreach',
-        description: 'Free health check-ups and medication distribution.'
-    },
-    {
-        image: '/5.jpeg',
-        title: 'Educational Support',
-        description: 'Supplying books, uniforms, and school materials.'
-    },
-    {
-        image: '/6.jpeg',
-        title: 'Shelter Assistance',
-        description: 'Helping homeless families find safe housing.'
-    }
-]
+import { ArrowUpRight, ArrowLeft, ArrowRight, X, Expand } from 'lucide-vue-next'
+import { photos } from '~/utils/media'
+const props = defineProps({ full: Boolean })
+const limit = ref(12)
+const visiblePhotos = computed(() => photos.slice(0, props.full ? limit.value : 6))
+const activeIndex = ref(0)
+const dialog = ref(null)
+const selected = computed(() => photos[activeIndex.value])
+function openPhoto(index) { activeIndex.value = index; dialog.value.showModal(); document.body.style.overflow = 'hidden' }
+function restoreScroll() { document.body.style.overflow = '' }
+function closePhoto() { dialog.value.close(); restoreScroll() }
+function step(direction) { activeIndex.value = (activeIndex.value + direction + photos.length) % photos.length }
+onBeforeUnmount(restoreScroll)
 </script>
-
-<style scoped>
-/* Optional custom styling */
-</style>
+<template>
+  <section id="gallery" class="gallery-section"><div class="site-container"><div class="section-heading"><div><p class="eyebrow">Our community, in focus</p><h2>Every picture has a story.</h2></div><NuxtLink v-if="!full" to="/gallery" class="text-link">View all {{ photos.length }} photos <ArrowUpRight :size="18" /></NuxtLink><span v-else class="media-count">{{ photos.length }} moments of connection</span></div><p class="section-description">A glimpse of the people, places, and shared moments that bring our mission to life.</p>
+    <div class="photo-grid"><button v-for="(photo, index) in visiblePhotos" :key="photo.id" class="photo-card" :aria-label="`Enlarge ${photo.title}`" @click="openPhoto(index)"><img :src="photo.src" :alt="photo.alt" loading="lazy" decoding="async" /><span class="photo-overlay"><span>{{ photo.title }}</span><Expand :size="18" /></span></button></div>
+    <div v-if="full && limit < photos.length" class="load-more"><button class="outline-button" @click="limit += 12">Show more photos <span>{{ Math.min(limit, photos.length) }} / {{ photos.length }}</span></button></div>
+  </div>
+  <dialog ref="dialog" class="photo-dialog" aria-label="Outreach photo preview" @close="restoreScroll" @click="($event.target === dialog) && closePhoto()" @keydown.left.prevent="step(-1)" @keydown.right.prevent="step(1)"><button class="dialog-close" aria-label="Close photo preview" autofocus @click="closePhoto"><X /></button><div class="dialog-content"><img :src="selected.src" :alt="selected.alt" /><div class="dialog-toolbar"><button aria-label="Previous photo" @click="step(-1)"><ArrowLeft /></button><p>{{ selected.title }} <span>{{ activeIndex + 1 }} / {{ photos.length }}</span></p><button aria-label="Next photo" @click="step(1)"><ArrowRight /></button></div></div></dialog>
+  </section>
+</template>

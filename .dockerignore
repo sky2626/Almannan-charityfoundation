@@ -1,0 +1,12 @@
+.git
+.gitignore
+.nuxt
+.output
+.env
+.env.*
+!.env.example
+node_modules
+npm-debug.log*
+*.log
+coverage
+.DS_Store

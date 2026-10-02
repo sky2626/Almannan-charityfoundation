@@ -1,49 +1,16 @@
-<template>
-    <section class="relative bg-gradient-to-br from-yellow-50 via-green-50 to-red-50">
-        <!-- Background overlay -->
-        <div class="absolute inset-0 bg-[url('/1.jpg')] bg-cover bg-center opacity-20"></div>
-
-        <div class="relative max-w-7xl mx-auto px-6 py-20 flex flex-col lg:flex-row items-center gap-12">
-            <!-- Left Content -->
-            <div class="flex-1 text-center lg:text-left space-y-6">
-                <h1 class="text-4xl lg:text-6xl font-extrabold text-gray-800 leading-tight">
-                    Together, We Can <span class="text-green-600">Change Lives</span>
-                </h1>
-                <p class="text-lg text-gray-600 max-w-xl">
-                    Our mission is simple — to bring hope to the poor, feed the hungry, and provide basic needs to those
-                    in crisis.
-                </p>
-                <div class="flex flex-wrap justify-center lg:justify-start gap-4">
-                    <Button class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl shadow-lg" onclick="document.getElementById('target-section').scrollIntoView({ behavior: 'smooth' });">
-                        Donate Now
-                    </Button>
-                    <Button variant="outline" @click="goToAbout"
-                        class="px-6 py-3 rounded-xl border-green-600 text-green-600 hover:bg-green-50">
-                        Learn More
-                    </Button>
-                </div>
-            </div>
-
-            <!-- Right Image -->
-            <div class="flex-1">
-                <div class="relative">
-                    <img src="/2.jpeg" alt="Helping Hands"
-                        class="rounded-2xl shadow-xl border-4 border-white" />
-                    <div class="absolute -bottom-6 -left-6 bg-white shadow-lg rounded-xl p-4 max-w-[250px]">
-                        <p class="text-sm text-gray-600">Your support helps us deliver food, shelter, and hope to those
-                            who need it most.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</template>
-
 <script setup>
-import { Button } from '@/components/ui/button'
-import { useRouter } from 'vue-router'
-const router = useRouter();
-function goToAbout() {
-    router.push('/about');
-}
+import { ArrowUpRight, Play, Heart } from 'lucide-vue-next'
+import { photos } from '~/utils/media'
 </script>
+<template>
+  <section class="home-hero">
+    <div class="site-container hero-grid">
+      <div class="hero-copy"><p class="eyebrow"><span class="little-dot"></span> Compassion in action</p><h1>A little kindness.<br />A world of <em>difference.</em></h1><p class="hero-description">Everyone deserves care, dignity, and a chance to thrive. Together, we bring food, essential support, and hope to the people who need it most.</p>
+        <div class="hero-actions"><NuxtLink to="/#target-section" class="action-button">Make a difference <ArrowUpRight :size="18" /></NuxtLink><NuxtLink to="/gallery?view=videos" class="watch-link"><span><Play :size="15" fill="currentColor" /></span> See our work</NuxtLink></div>
+        <div class="hero-note"><Heart :size="19" /><span>Rooted in compassion. United by community.</span></div>
+      </div>
+      <div class="hero-visual"><div class="hero-image-frame"><img :src="photos[0].src" alt="Almannan Charity Foundation volunteers and community members gathered at an outreach event" fetchpriority="high" /><span class="image-label"><span class="little-dot"></span> Real people. Real connections.</span></div><div class="kindness-note"><span class="note-heart"><Heart :size="25" /></span><div><strong>Hope starts with us.</strong><span>One community. One act at a time.</span></div></div><span class="hero-spark" aria-hidden="true">✳</span></div>
+    </div>
+    <div class="values-strip site-container"><span>People at the heart of everything.</span><span><Heart :size="17" /> Compassion</span><span>✳ Community</span><span>↗ Lasting hope</span></div>
+  </section>
+</template>
